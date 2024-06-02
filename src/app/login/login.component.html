@@ -1,0 +1,25 @@
+<header>
+  <title>Login</title>
+  <h1>PROFILIQUE</h1>
+</header>
+
+<div class="login">
+  <h1>Login</h1>
+  <form>
+      <label>Email Address</label>
+      <br>
+      <input type="email" name="email" id="emailInput">
+      <br>
+      <br>
+      <label>Password</label>
+      <br>
+      <div class="password-container">
+          <input type="password" name="pass" id="password">
+          <button type="button" id="showPassword" (click)="togglePasswordVisibility()"></button>
+      </div>
+
+      <input type="submit" name="submit" value="Login to Continue">
+  </form>
+  <p>Don't have an account? <a routerLink="/register">Sign Up</a></p>
+  <button type="button" (click)="adduser()">Register</button>
+</div>

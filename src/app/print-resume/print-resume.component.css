@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@font-face {
+    font-family: Poppins-Black;
+    src: url(/assets/Poppins-Black.ttf);
+    font-weight: black;
+}
+
+.container {
+    background-position: center;
+    position: relative; /* Change position to relative */
+    width: 8.5in;
+    height: 11in;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+@media print {
+    @page {
+        size: letter;
+    }
+    .container {
+        -webkit-print-color-adjust: exact;
+        margin: 0;
+        padding: 0;
+        width: 8.5in;
+        height: 11in;
+        overflow: hidden;
+        size: letter;
+    }
+    body * {
+        visibility: hidden; /* Hide all elements */
+    }
+    .container, .container * {
+        visibility: visible; /* Make the container and its children visible */
+    }
+    .container {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+@page {
+    size: 8.5in 11in;
+    margin:0;
+}
+
+.left-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33%; /* 20% of 8.5in */
+    height: 100%;
+    background-color: #E86A1C; /* Orange color */
+    z-index: 2; /* Ensure the stripe is on top */
+}
+.wave {
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background: #F7D8C3;
+    transform: scale(1, 1);
+    z-index: 1;
+}
+
+.wave:before {
+    content: "";
+    display: block;
+    position: relative;
+    border-radius: 100%;
+    width: 100%;
+    height: 300.2px;
+    background-color: white;
+    right: -45%;
+    top: 140px;
+}
+
+.wave:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 400px; /* Increased height to make the wave bigger */
+    background-color: #F7D8C3;
+    left: -35%; /* Adjusted left position for wider appearance */
+    top: -120px; /* Adjusted top position for higher appearance */
+    clip-path: ellipse(120% 30% at -15% 90%); /* Adjusted ellipse size for larger wave */
+}
+
+.wave2 {
+    display: block;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    top: 800px;
+    background: #F7D8C3;
+    transform: scale(1, 1);
+    z-index: 1;
+    transform: scaleY(-1); 
+}
+
+.wave2:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 400px; /* Adjusted height for the before pseudo-element */
+    background-color: #F7D8C3;
+    left: 36%;
+    top: -50px;
+    transform: scaleY(-1); 
+}
+
+.wave2:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 400px; /* Adjusted height for the before pseudo-element */
+    background-color: rgb(255, 255, 255);
+    left: -40%;
+    top: 200px;
+    transform: scaleY(-1); 
+}
+
+.flex-container {
+    position: relative;
+    top: -270px; /* Adjust based on your layout */
+    left: 38%; /* Adjust based on your layout */
+    z-index: 3; /* Ensure .information-right is on top */
+}
+
+.information-right {
+    font-family: 'Poppins-Black', sans-serif; /* Example font-family */
+    font-size: 24px; /* Example font-size */
+    color: #f00000; /* Example text color */
+}
+.information-right, .firstname, .lastname  {
+    font-family: Poppins-Black;
+    font-size: 35pt;
+}
+.information-right{
+    font-family: arial;
+    font-size: 25pt;
+    color: orange;
+    letter-spacing: 5px;
+}
+.lastname {
+    margin-top: 10px;
+}
+.studentno {
+    margin-top: 7px;
+    font-weight: lighter;
+    font-size: 25pt;
+    font-family: arial;
+    color: rgb(255, 111, 28);
+    letter-spacing: 5px;
+}
+.course {
+    margin-top: 40px;
+    font-weight: bolder;
+    font-family: arial;
+    font-weight: bolder;
+    font-size: 25pt;
+    color: rgb(255, 136, 0);
+    letter-spacing: 5px;  
+}
+.schoolx {
+    margin-top: 40px;
+    color: rgb(255, 136, 0);
+    font-family: Poppins-Black;
+    font-weight: bolder;
+    font-size: 25pt;
+    letter-spacing: 5px;
+}
+.schoolone{
+    margin-top: 10px;
+    font-family: Poppins-black;
+    font-size: 12pt;
+    color: orange;
+    letter-spacing: 0px;
+}
+.schooloneinfo{
+    font-family: Poppins;
+    font-size: 12pt;
+    color: Black;
+    letter-spacing: 0px;
+}
+.schooltwo{
+    margin-top: 10px;
+    font-family: Poppins-black;
+    font-size: 12pt;
+    color: orange;
+    letter-spacing: 0px;
+}
+.schooltwoinfo{
+    font-family: Poppins;
+    font-size: 12pt;
+    color: Black;
+    letter-spacing: 0px;
+}
+.portfolio{
+    margin-top: 20px;
+    font-family: Poppins-black;
+    font-size: 25pt;
+    color: rgb(255, 136, 0);
+    letter-spacing: 4px;
+}
+
+.portfolio-one {
+    display: flex; /* Use flexbox to arrange children in a row */
+    flex-wrap: wrap; /* Allow wrapping if there are too many images */
+}
+
+.portfolio-one img {
+    margin-top: 10px;
+    width: 200px; /* Set the width of the image */
+    height: auto;
+    border: 1px solid black;
+    margin-right: 32px;
+
+}
+
+.portfolio-two {
+    display: flex; /* Use flexbox to arrange children in a row */
+    flex-wrap: wrap; /* Allow wrapping if there are too many images */
+}
+
+.portfolio-two img {
+    margin-top: 10px;
+    width: 200px; /* Set the width of the image */
+    height: auto;
+    border: 1px solid black;
+    margin-right: 32px;
+}
+
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    width: 100%;
+    gap: 0px; /* No space between the two items */
+    font-family: Poppins;
+}
+
+.nameone, .nametwo {
+    flex-basis: 48%; /* Initial width for both items */
+    max-width: 35%; /* Maximum width to ensure they wrap appropriately */
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1px; /* Optional: add padding for better text visibility */
+    
+    display: -webkit-box; /* Flexbox for webkit browsers */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 2; /* Limit to 2 lines */
+    line-height: 1; /* Set line height */
+}
+
+.nametwo {
+    margin-right: 157px; /* Adjust margin if needed */
+}
+.namethree, .namefour {
+    flex-basis: 48%; /* Initial width for both items */
+    max-width: 35%; /* Maximum width to ensure they wrap appropriately */
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1px; /* Optional: add padding for better text visibility */
+    
+    display: -webkit-box; /* Flexbox for webkit browsers */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 2; /* Limit to 2 lines */
+    line-height: 1; /* Set line height */
+}
+
+.namefour {
+    margin-right: 157px; /* Adjust margin if needed */
+}
+.flex-container2 {
+    position: relative;
+    top:  -1200px; /* Adjust based on your layout */
+    left: 2.5%; /* Adjust based on your layout */
+    z-index: 3; /* Ensure .information-right is on top */
+
+}
+.information-left {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px; /* Example width */
+    z-index: 6; /* Set a higher z-index than .information-right */
+} 
+.profilepic {
+    width: 200px; /* Example width */
+    height: 200px; /* Example height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 4; /* Set a high z-index to ensure it's above other content */
+    left: 10px;
+}
+
+.profilepic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: #F7D8C3 1px solid;
+}
+
+.contactinfo{
+    margin-top: 45px;
+    font-family: Poppins-Black;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+     
+}
+
+.contactno{
+    font-family: Poppins;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;  
+}
+
+.emailll {
+    margin-top: 25px;
+    font-family: Poppins-Black;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    
+    
+}
+.email {
+    font-family: Poppins;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    max-width: 100%; /* Maximum width to ensure they wrap appropriately */
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1px; /* Optional: add padding for better text visibility */
+    
+    display: -webkit-box; /* Flexbox for webkit browsers */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 2; /* Limit to 2 lines */
+    line-height: 1.5; /* Set line height */
+}
+.addressinfo{
+    margin-top: 25px;
+    font-family: Poppins-Black;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    
+}
+.address{
+    font-family: Poppins;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    max-width: 100%; /* Maximum width to ensure they wrap appropriately */
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1px; /* Optional: add padding for better text visibility */
+    
+    display: -webkit-box; /* Flexbox for webkit browsers */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 2; /* Limit to 2 lines */
+    line-height: 1.5; /* Set line height */
+}
+
+.skills{
+    margin-top: 30px;
+    font-family: Poppins-Black;
+    font-size: 14pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 8px;  
+}
+ul{
+    font-family: Poppins;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 8px;
+}
+.emergency{
+    margin-top: 40px;
+    font-family: Poppins-black;
+    font-size: 14pt;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+}
+.emergency-contact{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    max-width: 100%; /* Maximum width to ensure they wrap appropriately */
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1px; /* Optional: add padding for better text visibility */
+    
+    display: -webkit-box; /* Flexbox for webkit browsers */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 2; /* Limit to 2 lines */
+    line-height: 1; /* Set line height */
+    margin-bottom: 5px;
+}
+.emergency-no{
+    font-family: Poppins;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 8px;
+    width: 200px;
+}
+.coordinator{
+    margin-top: 40px;
+    font-family: Poppins-Black;
+    font-size: 14pt;
+    color: rgb(255, 255, 255);
+    
+}
+.coordinator-name{
+    margin-top: 10px;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    max-width: 100%; /* Maximum width to ensure they wrap appropriately */
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Wrap long words */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1px; /* Optional: add padding for better text visibility */
+    
+    display: -webkit-box; /* Flexbox for webkit browsers */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 2; /* Limit to 2 lines */
+    line-height: 1; /* Set line height */
+}
+.coordinator-no{
+    font-family: Poppins;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 8px;
+}
+
+button {
+    padding: 15px 25px;
+    height: 50px;
+    width: 225px;
+    font-size: 17.5px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #FF7001;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    margin: 25px;
+    
+}

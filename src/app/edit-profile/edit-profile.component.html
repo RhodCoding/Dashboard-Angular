@@ -1,0 +1,146 @@
+<br><br><br><br>
+<body>
+  <section>
+    <form (submit)="onSubmit($event)">
+      <div class="flex-container">
+        <div class="flex-child">First Name</div>
+        <div class="flex-child">Last Name</div>
+        <div class="flex-child">Middle Initial</div>  
+      </div> 
+      <div class="flex-container">
+        <input type="text" id="fname" formControlName="fname" placeholder="Enter your first name" style="padding: 10px; margin-right:10px; margin-top: 10px;">
+        <input type="text" id="lname" formControlName="lname"placeholder="Enter your last name" style="padding: 10px; margin:10px;">
+        <input type="text" id="mi" formControlName="mi"placeholder="Enter your middle name" style="padding: 10px; margin:10px;">
+      </div><br>
+
+      <div class="flex-container">
+        <div class="flex-child">Date of Birth</div>
+        <div class="flex-child">Place of Birth</div>
+        <div class="flex-child">Sex</div>  
+      </div> 
+      <div class="flex-container">
+        <input type="date" id="dob" formControlName="dob" placeholder="When were you born?" style="padding: 10px; margin:10px;">
+        <input type="text" id="pob" formControlName="pob" placeholder="Enter your place of birth" style="padding: 10px; margin:10px;">
+        <select id="Sex" id="sex" formControlName="sex" style="padding: 10px; margin:10px;">
+          <option value="male">Male</option>
+          <option value="saab">Female</option>
+          <option value="prf">Prefer not to say</option>
+        </select>
+      </div><br>
+
+
+      <div class="flex-container">
+        <div class="flex-child">Year Level</div>
+        <div class="flex-child">Course</div> 
+        <div class="flex-child">School Number</div>
+      </div>
+      <div class="flex-container"> 
+        <select id="yrlvl" formControlName="yrlvl"style="padding: 10px; margin:10px;">
+            <option value="fist">1st Year</option>
+            <option value="second">2nd Year</option>
+            <option value="third">3rd Year</option>
+            <option value="fourt">4th Year</option>
+        </select>
+        <select id="course" formControlName="course"style="padding: 10px; margin:10px;">
+            <option value="BSCS">BSCS</option>
+            <option value="BSIT">BSIT</option>
+            <option value="BSEMC">BSEMC</option>
+            <option value="ACT">ACT</option>
+        </select>
+        <input type="string" id="studentno" formControlName="studentno" placeholder="Enter your student number" style="padding: 10px; margin:10px;" >
+      </div><br>
+
+
+      <div class="flex-container">
+        <div class="flex-child">Address</div>
+        <div class="flex-child">Contact Number</div>
+        <div class="flex-child">Email Address</div>  
+      </div> 
+      <div class="flex-container">
+        <input type="text" id="address" formControlName="address" placeholder="Enter your Home address" style="padding: 10px; margin:10px;">
+        <input type="tel" id="contactnumber" formControlName="contactnumber" placeholder="Contact Number"style="padding: 10px; margin:10px;">
+        <input type="email" id="emaddress" formControlName="emaddress" placeholder="Enter your email address" style="padding: 10px; margin:10px;">
+      </div><br>
+
+
+      <div class="flex-container">  
+        <div class="flex-child">Junior High School</div>
+        <div class="flex-child">Year Finished Junior HS</div>
+        <div class="flex-child">Citizenship</div>    
+      </div> 
+      <div class="flex-container">
+        <input type="text" id="jhs" formControlName="jhs" placeholder="Enter your Junior High School" style="padding: 10px; margin:10px;">
+        <input type="number" id="syjhs" formControlName="syjhs" placeholder="Enter the year you finished Junior Highschool "style="padding: 10px; margin:10px;">
+        <select id="citizenship" formControlName="citizenship" style="padding: 10px; margin:10px;">
+        <option value="ph">Filipino</option>
+        <option value="foreign">Foreign</option>
+        <option value="prf1">Prefer not to say</option>
+        </select>
+      </div><br>
+
+
+      <div class="flex-container">
+        <div class="flex-child">Senior High School</div>
+        <div class="flex-child">Year Finished Junior HS</div>
+        <div class="flex-child">Civil Status</div>
+      </div> 
+      <div class="flex-container">
+        <input type="text" id="shs" formControlName="shs" placeholder="Enter your Senior High School" style="padding: 10px; margin:10px;">
+        <input type="text" id="syshs" formControlName="syshs" placeholder="Enter the year you finished Senior Highschool" style="padding: 10px; margin:10px;">
+        <select id="civilstatus" formControlName="civilstatus" style="padding: 10px; margin:10px;">
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+        <option value="widow">Widowed</option>
+        <option value="other">Other</option>
+        </select>
+      </div><br>
+
+
+      <div class="flex-container">
+        <div class="flex-child">Parent/Guardian</div>
+        <div class="flex-child">Parent/Guardian Email</div>
+        <div class="flex-child">Parent/Guardian Contact Number</div>
+      </div><br>
+      <div class="flex-container">
+        <input type="text" id="parentguardian" formControlName="parentguardian" placeholder="Enter your Parent/Guardians Name"style="padding: 10px; margin:10px;">
+        <input type="email" id="parentguardian" formControlName="pgemail" placeholder="Enter your Parent/Guardians Email Address"style="padding: 10px; margin:10px;">
+        <input type="tel" id="parentguardian" formControlName="pgnumber" placeholder="Enter your Parent/Guardians Contact Number"style="padding: 10px; margin:10px;">
+      </div><br>
+
+
+      <div class="flex-child checkbox-container"> 
+        <span style="font-size: 19px;">Skills:</span><br><br>
+        <input type="checkbox" id="skill1" id="skill1" value="Python">
+        <label for="skill1"> Python</label><br>
+        <input type="checkbox" id="skill2" id="skill2" value="Java">
+        <label for="skill2"> Java</label><br>
+        <input type="checkbox" id="skill3" id="skill3" value="Javascript">
+        <label for="skill3"> Javascript</label><br>
+        <input type="checkbox" id="skill4" id="skill4" value="Html">
+        <label for="skill4"> Html</label><br>
+        <input type="checkbox" id="skill5" id="skill5" value="css">
+        <label for="skill5"> css</label><br>
+        <input type="checkbox" id="skill6" id="skill6" value="C#">
+        <label for="skill6"> C#</label><br>
+        <input type="checkbox" id="skill7" id="skill7" value="C++">
+        <label for="skill7"> C++</label><br>
+        <input type="checkbox" id="skill8" id="skill8" value="Php">
+        <label for="skill8"> Php</label><br>
+        <input type="checkbox" id="skill9" id="skill9" value="Others">
+        <label for="skill9"> Others</label><br>
+      </div>
+
+      <h3 *ngFor="let student of students">{{ student.lname }}</h3>
+      <button class="primary" type="submit">Save Profile</button>
+      
+    </form> 
+  </section>
+</body>
+
+
+
+
+
+
+
+

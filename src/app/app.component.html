@@ -1,0 +1,28 @@
+ <body> 
+      <div style="display: flex; margin-right: 250px;">
+        <nav>
+          <header>
+            <img src="./assets/logo.png" alt="Logo" class="logo">
+            <ul>
+              <li><a routerLink="/app-front" routerLinkActive="active" aria-current="page">dashboard</a></li>
+
+              <li><a routerLink="/app-edit-profile" routerLinkActive="active" aria-current="page">edit profile</a></li>
+              <li><a routerLink="/app-print-resume" onclick="openPrintResume(event)" routerLinkActive="active" aria-current="page">resume</a></li>
+            </ul>
+            <a href="#"><img src="./assets/exit.png" alt="Exit" class="exit"></a>
+          </header>
+        </nav>
+      </div>
+      <router-outlet></router-outlet>
+    <script>
+        function openPrintResume(event) {
+          event.preventDefault(); // Prevent the default anchor click behavior
+        
+          const newWindow = window.open('/app-print-resume', '_blank');
+          newWindow.document.write('<html><head><title>Print Resume</title></head><body>');
+          newWindow.document.write('<app-print-resume></app-print-resume>'); // Replace with your actual component selector
+          newWindow.document.write('</body></html>');
+          newWindow.document.close();
+        }
+      </script>
+</body>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #FF7001;
+    width: 250px;
+    height: 100vh; /* Full height */
+    font-size: 22px;
+    font-weight: bolder;
+    padding-top: 20px;
+     /* Keep header in place while scrolling */
+    position: -webkit-sticky; /* Safari */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header li {
+    margin-bottom: 50px;
+}
+
+header li a {
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+header li:hover {
+    background-color: white;
+    opacity: 0.6;
+    color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+header a:hover {
+    color: black;
+}
+
+header .active {
+    background-color: #7a3500;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: black;
+    flex: 2;
+    padding-left: 20px;
+}
+
+.logo, .exit {
+    display: block;
+    margin: 20px auto 50px auto;
+    border-radius: 15px;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;
+}
+
+.exit {
+    height: 40px;
+    width: 40px;
+    filter: invert(100%) sepia(3%) saturate(7481%) hue-rotate(247deg) brightness(114%) contrast(93%);
+    margin-top: 390px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding: 20px;
+    flex: 1;
+}
